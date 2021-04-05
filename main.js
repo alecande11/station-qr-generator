@@ -7,6 +7,9 @@ async function connectWallet() {
     address =  response.address;
     document.getElementById('connect-button').setAttribute('value', response.address);
     document.getElementById('download').style.display = 'none';
+    if(address){
+        generateQR();
+    }
 }
 
 

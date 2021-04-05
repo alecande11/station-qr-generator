@@ -15,7 +15,7 @@
   <a href='https://terra.money/extension' target="_blank" class="download" id='download'>Download the extension</a>
 </form>
 
-<form action='' class='form' onchange="generateQR()" onsubmit="generateQR(); return false" style="margin-top: 3rem;">
+<form action='' class='form' onsubmit="generateQR(); return false" style="margin-top: 3rem;">
   <div class='field'>
     <h1>QR generator by MissionControl</h1>
   </div>
@@ -26,7 +26,9 @@
   <p class='field required' style="padding-top: 3rem;">
     <label class='label' for='address'>You can enter your address here or connect the Terra extension</label>
     <input class='text-input' id='address' name='address' required type='text' value=''>
+    <input class='button' type='submit' value='Generate'>
   </p>
+
 </form>
 <img class='img' id='img' src='' style="display: none;">
 
