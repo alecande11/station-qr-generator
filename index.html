@@ -15,7 +15,7 @@
   <a href='https://terra.money/extension' target="_blank" class="download" id='download'>Download the extension</a>
 </form>
 
-<form action='' class='form' onsubmit="generateQR(); return false" style="margin-top: 3rem;" id='manual-input'>
+<form action='' class='form' onsubmit="generateQR(); return false" style="margin-top: 3rem;" >
   <div class='field'>
     <h1>QR generator by MissionControl</h1>
   </div>
@@ -23,7 +23,7 @@
   <p class='field description'>
     This tool allows you to generate a QR code to connect your address to Terra Station Mobile, you can use it if you have a Ledger or if you prefer not to keep your private keys on your smartphone, (with this QR it will not be possible to sign transactions from mobile but only view the balance of your address)
   </p>
-  <p class='field required' style="padding-top: 3rem;">
+  <p class='field required' style="padding-top: 3rem;" id='manual-input'>
     <label class='label' for='address'>You can enter your address here or connect the Terra extension</label>
     <input class='text-input' id='address' name='address' required type='text' value=''>
     <input class='button' type='submit' value='Generate'>
