@@ -8,6 +8,7 @@ async function connectWallet() {
     document.getElementById('connect-button').setAttribute('value', response.address);
     document.getElementById('download').style.display = 'none';
     if(address){
+        document.getElementById('manual-input').style.display = 'none';
         generateQR();
     }
 }
