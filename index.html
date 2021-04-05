@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>QR code generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700'><link rel="stylesheet" href="./style.css">
+  <script crossorigin src="https://cdn.jsdelivr.net/npm/@terra-money/terra.js@0.5.2/dist/bundle.min.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body onLoad="connectWallet()">
+<!-- partial:index.partial.html -->
+<form class='form' onsubmit="connectWallet(); return false" style="top:0rem; right: 0rem;">
+  <input class='button' type='submit' id='connect-button' value='Connect Extension' >
+  <a href='https://terra.money/extension' target="_blank" class="download" id='download'>Download the extension</a>
+</form>
+
+<form action='' class='form' onchange="generateQR()" onsubmit="generateQR(); return false" style="margin-top: 3rem;">
+  <div class='field'>
+    <h1>QR generator by MissionControl</h1>
+  </div>
+  <a href='https://mcontrol.ml' target="_blank">https://mcontrol.ml</a>
+  <p class='field description'>
+    This tool allows you to generate a QR code to connect your address to Terra Station Mobile, you can use it if you have a Ledger or if you prefer not to keep your private keys on your smartphone, (with this QR it will not be possible to sign transactions from mobile but only view the balance of your address)
+  </p>
+  <p class='field required' style="padding-top: 3rem;">
+    <label class='label' for='address'>You can enter your address here or connect the Terra extension</label>
+    <input class='text-input' id='address' name='address' required type='text' value=''>
+  </p>
+</form>
+<img class='img' id='img' src='' style="display: none;">
+
+<p class='field description'>
+  The default password is: password1234
+</p>
+
+</img>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.customSelect/0.5.1/jquery.customSelect.min.js'></script>
+</body>
+</html>
