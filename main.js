@@ -37,5 +37,8 @@ async function generateQR(){
     let formattedJSON = `{"name":"ledger","address":"${addr}","encrypted_key":"86064ac2525390c7f80f70baaade7c4d5429b4f5786eba8a366134334cd354f4GOe7YuZRzxyccvmGS+XlccuPzwE33I3XvqG5SNPAdQRTzAecPr77NhenT7PH03v4F50+YDZ0uFp9lEtOaMgqW15ihQOGwul4BpfY1+5AOmg="}`;
     let encodedString = btoa(formattedJSON);
     document.getElementById('img').style.display = 'block';
+    document.getElementById('qr_text').style.display = 'block';
+    
+    document.getElementById('qr_link').href = 'https://api.qrserver.com/v1/create-qr-code/?color=000&bgcolor=fff&size=300x300&data=' + encodeURIComponent('terrastation://wallet_recover/?payload=' + encodedString);
     document.getElementById('img').src = 'https://api.qrserver.com/v1/create-qr-code/?color=fff&bgcolor=007ACC&size=250x250&data=' + encodeURIComponent('terrastation://wallet_recover/?payload=' + encodedString);
 }
